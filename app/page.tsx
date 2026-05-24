@@ -102,7 +102,7 @@ export default function Home() {
               text-yellow-400
               mb-8"
             >
-              Yandex Pro Resmi İş Ortağı
+              Yandex GO Resmi İş Ortağı
             </div>
 
             <h1 className="text-6xl md:text-8xl font-black leading-[0.9]">

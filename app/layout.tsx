@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   applicationName: "HiGO",
 
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favico.ico",
   },
 
   openGraph: {

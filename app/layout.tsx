@@ -20,9 +20,21 @@ export const metadata: Metadata = {
     "İstanbul",
     "Taksi",
     "Sürücü",
+    "Yandex",
   ],
 
   applicationName: "HiGO",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 
   openGraph: {
     title: "HiGO",
@@ -47,48 +59,23 @@ export const metadata: Metadata = {
     description:
       "İstanbul'da Yandex Pro resmi iş ortağı.",
   },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="tr">
 
-      <head>
-
-        <link
-          rel="icon"
-          href="/hi.png"
-          type="image/png"
-        />
-
-        <link
-          rel="shortcut icon"
-          href="/hi.png"
-        />
-
-        <link
-          rel="apple-touch-icon"
-          href="/hi.png"
-        />
-
-      </head>
-
       <body
         className={`
-        ${geist.className}
-        bg-black
-        text-white
-        antialiased
-        min-h-screen
+          ${geist.className}
+          bg-black
+          text-white
+          antialiased
+          min-h-screen
         `}
       >
         {children}

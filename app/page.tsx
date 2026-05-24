@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 
 const APPLY_URL = "#";
 
@@ -37,6 +38,10 @@ export default function Home() {
 
   return (
     <main className="bg-black text-white">
+	<Script
+src="https://yastatic.net/taxi-widget/ya-taxi-widget-v2.js"
+strategy="afterInteractive"
+/>
 
       {/* NAV */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-black/70 border-b border-white/10">
@@ -494,6 +499,38 @@ export default function Home() {
 
         </div>
 
+{/* YANDEX BADGE */}
+
+<section className="py-16">
+
+<div className="max-w-7xl mx-auto px-6 text-center">
+
+<div className="text-zinc-400 mb-6">
+
+Resmi Yandex Entegrasyonu
+
+</div>
+
+<div
+className="ya-taxi-widget"
+data-ref="15048508"
+data-proxy-url="https://{app}.redirect.appmetrica.yandex.com/route?start-lat={start-lat}&start-lon={start-lon}&end-lat={end-lat}&end-lon={end-lon}&tariffClass={tariff}&ref={ref}&appmetrica_tracking_id={redirect}&lang={lang}&erid={erid}"
+data-tariff="econom"
+data-app="3"
+data-lang="tr"
+data-redirect="1178268795219780156"
+data-description="HiGO"
+data-size="s"
+data-theme="action"
+data-title="HiGO ile Başvur"
+data-use-location="true"
+data-point-a=""
+data-point-b=""
+/>
+
+</div>
+
+</section>
       </footer>
 
 <div

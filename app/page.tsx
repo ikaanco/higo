@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const APPLY_URL = "https://www.turkticaret.net";
+const APPLY_URL = "#";
 
 export default function Home() {
   const stats = [

@@ -1,28 +1,62 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geist = Geist({
   subsets: ["latin"],
+  variable: "--font-geist",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const metadata: Metadata = {
+  metadataBase: new URL("https://higo.com.tr"),
 
-export const metadata = {
-  title: {
-    default: "HiGO",
-    template: "%s | HiGO",
-  },
+  title: "HiGO | Yandex Pro Resmi İş Ortağı",
 
   description:
-    "İstanbul'da Yandex Pro resmi iş ortağı.",
+    "İstanbul'da sürücüler için daha güçlü, daha şeffaf ve daha verimli sistem.",
+
+  keywords: [
+    "HiGO",
+    "Yandex Pro",
+    "İstanbul",
+    "Taksi",
+    "Sürücü",
+    "Yandex",
+  ],
+
+  applicationName: "HiGO",
 
   icons: {
     icon: "/favicon.ico",
+  },
+
+  openGraph: {
+    title: "HiGO",
+
+    description:
+      "İstanbul'da Yandex Pro resmi iş ortağı.",
+
+    url: "https://higo.com.tr",
+
+    siteName: "HiGO",
+
+    locale: "tr_TR",
+
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "HiGO",
+
+    description:
+      "İstanbul'da Yandex Pro resmi iş ortağı.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -33,10 +67,18 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="tr"
+      className={`${geist.variable} scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body
+        className="
+        bg-black
+        text-white
+        antialiased
+        min-h-screen"
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -4,7 +4,6 @@ import "./globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-geist",
 });
 
 export const metadata: Metadata = {
@@ -21,21 +20,9 @@ export const metadata: Metadata = {
     "İstanbul",
     "Taksi",
     "Sürücü",
-    "Yandex",
   ],
 
   applicationName: "HiGO",
-
-  icons: {
-  icon: [
-    {
-      url: "/hi.png",
-      type: "image/png",
-    },
-  ],
-  shortcut: "/hi.png",
-  apple: "/hi.png",
-},
 
   openGraph: {
     title: "HiGO",
@@ -69,23 +56,44 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="tr"
-      className={`${geist.variable} scroll-smooth`}
-    >
+    <html lang="tr">
+
+      <head>
+
+        <link
+          rel="icon"
+          href="/hi.png"
+          type="image/png"
+        />
+
+        <link
+          rel="shortcut icon"
+          href="/hi.png"
+        />
+
+        <link
+          rel="apple-touch-icon"
+          href="/hi.png"
+        />
+
+      </head>
+
       <body
-        className="
+        className={`
+        ${geist.className}
         bg-black
         text-white
         antialiased
-        min-h-screen"
+        min-h-screen
+        `}
       >
         {children}
       </body>
+
     </html>
   );
 }

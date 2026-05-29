@@ -4,24 +4,24 @@ const APPLY_URL = "#";
 
 export default function Home() {
   const stats = [
-    ["Istanbul", "Operational Focus"],
-    ["Taksim", "Field Experience"],
-    ["Daily", "Driver Coordination"],
-    ["Growing", "Fleet Network"],
+    ["İstanbul", "Operasyon Bölgesi"],
+    ["Taksim", "Saha Deneyimi"],
+    ["Günlük", "Sürücü Koordinasyonu"],
+    ["Büyüyen", "Filo Ağı"],
   ];
 
   const operations = [
     {
-      title: "Fleet Coordination",
-      desc: "Structured vehicle and driver coordination for scalable operations.",
+      title: "Filo Koordinasyonu",
+      desc: "Sürücü ve araç yönetimi için organize operasyon yapısı.",
     },
     {
-      title: "Driver Onboarding",
-      desc: "Organized onboarding and support process for drivers.",
+      title: "Sürücü Süreçleri",
+      desc: "Düzenli onboarding ve sürücü destek sistemi.",
     },
     {
-      title: "Operational Support",
-      desc: "Daily operational management focused on Istanbul mobility.",
+      title: "Operasyon Desteği",
+      desc: "İstanbul odaklı günlük operasyon yönetimi.",
     },
   ];
 
@@ -36,15 +36,15 @@ export default function Home() {
 
           <nav className="hidden md:flex gap-8 text-zinc-300">
             <a href="#operations" className="hover:text-white transition">
-              Operations
+              Operasyon
             </a>
 
             <a href="#about" className="hover:text-white transition">
-              About
+              Hakkımızda
             </a>
 
             <a href="#contact" className="hover:text-white transition">
-              Contact
+              İletişim
             </a>
           </nav>
 
@@ -52,7 +52,7 @@ export default function Home() {
             href={APPLY_URL}
             className="bg-yellow-400 text-black px-6 py-3 rounded-2xl font-bold hover:scale-105 transition"
           >
-            Contact Operations
+            İletişime Geç
           </a>
         </div>
       </header>
@@ -64,22 +64,22 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <div className="inline-flex px-5 py-2 rounded-full bg-yellow-400/10 text-yellow-400 mb-8">
-              Fleet Operations in Istanbul
+              İstanbul Filo Operasyonları
             </div>
 
             <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
-              Fleet
+              İstanbul İçin
               <br />
-              Operations
+              Modern
               <br />
               <span className="text-yellow-400">
-                for Istanbul Mobility
+                Operasyon Yapısı
               </span>
             </h1>
 
             <p className="mt-8 text-zinc-400 text-xl max-w-xl leading-9">
-              Operational support, driver coordination, and scalable fleet
-              management focused on Istanbul transportation operations.
+              Sürücü koordinasyonu, operasyon desteği ve büyüyebilir filo
+              yönetimi için İstanbul merkezli yapı.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -87,21 +87,21 @@ export default function Home() {
                 href={APPLY_URL}
                 className="bg-yellow-400 text-black px-10 py-5 rounded-3xl font-black hover:scale-105 transition"
               >
-                Driver Applications
+                Sürücü Başvurusu
               </a>
 
               <a
                 href="#about"
                 className="border border-white/10 px-10 py-5 rounded-3xl hover:bg-white/5 transition"
               >
-                Learn More
+                Detaylı İncele
               </a>
             </div>
 
             <div className="mt-10 flex gap-6 flex-wrap text-zinc-500">
-              <div>✓ Istanbul Based</div>
-              <div>✓ Driver Support</div>
-              <div>✓ Operational Structure</div>
+              <div>✓ İstanbul Merkezli</div>
+              <div>✓ Sürücü Desteği</div>
+              <div>✓ Operasyon Sistemi</div>
             </div>
           </div>
 
@@ -109,7 +109,7 @@ export default function Home() {
             <div className="rounded-[40px] overflow-hidden border border-white/10 bg-white/5">
               <Image
                 src="/yndpro.png"
-                alt="HIGO Fleet Operations"
+                alt="HIGO Operasyon"
                 width={1500}
                 height={1000}
                 priority
@@ -147,11 +147,11 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-yellow-400 font-black mb-4">
-            OPERATIONAL STRUCTURE
+            OPERASYON YAPISI
           </div>
 
           <h2 className="text-5xl md:text-6xl font-black max-w-4xl leading-tight">
-            Structured Transportation Operations for Istanbul
+            İstanbul İçin Yapılandırılmış Operasyon Sistemi
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 mt-20">
@@ -180,22 +180,21 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-yellow-400 font-black mb-4">
-            ABOUT HIGO
+            HAKKIMIZDA
           </div>
 
           <h2 className="text-5xl md:text-6xl font-black leading-tight">
-            Istanbul-Based Mobility Operations
+            İstanbul Merkezli Operasyon Yapısı
           </h2>
 
           <p className="mt-10 text-zinc-400 text-xl leading-10">
-            HIGO is an Istanbul-based operational initiative focused on fleet
-            coordination, driver onboarding, and transportation support systems.
+            HIGO, sürücü koordinasyonu, filo yönetimi ve ulaşım operasyonları
+            üzerine odaklanan İstanbul merkezli bir operasyondur.
           </p>
 
           <p className="mt-8 text-zinc-500 text-lg leading-9">
-            With direct field experience in high-demand transportation areas
-            such as Taksim, HIGO aims to build scalable and structured
-            operational solutions within the urban mobility ecosystem.
+            Taksim gibi yoğun bölgelerde edinilen saha deneyimi ile birlikte,
+            büyüyebilir ve düzenli bir operasyon yapısı oluşturmayı hedefler.
           </p>
         </div>
       </section>
@@ -204,23 +203,22 @@ export default function Home() {
       <section className="py-32">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-6xl font-black leading-tight">
-            Building Structured
+            Güçlü ve
             <br />
             <span className="text-yellow-400">
-              Fleet Operations
+              Düzenli Operasyon
             </span>
           </h2>
 
           <p className="mt-8 text-zinc-400 text-xl">
-            Focused on scalable driver coordination and operational support in
-            Istanbul.
+            İstanbul'da büyüyebilir sürücü koordinasyonu ve operasyon desteği.
           </p>
 
           <a
             href={APPLY_URL}
             className="inline-block mt-10 bg-yellow-400 text-black px-14 py-5 rounded-3xl font-black hover:scale-105 transition"
           >
-            Contact Operations
+            Operasyon Ekibiyle İletişim
           </a>
         </div>
       </section>
@@ -232,15 +230,15 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="text-yellow-400 font-black mb-4">
-            CONTACT
+            İLETİŞİM
           </div>
 
           <h2 className="text-5xl font-black">
-            Let’s Connect
+            Bizimle İletişime Geçin
           </h2>
 
           <div className="mt-12 space-y-5 text-zinc-400 text-lg">
-            <p>Istanbul, Türkiye</p>
+            <p>İstanbul, Türkiye</p>
 
             <p>operations@higo.com.tr</p>
 
@@ -257,7 +255,7 @@ export default function Home() {
           </div>
 
           <p className="mt-5 text-zinc-500">
-            Istanbul Fleet Operations
+            İstanbul Operasyon Yapısı
           </p>
 
           <p className="mt-8 text-zinc-600">

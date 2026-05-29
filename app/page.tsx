@@ -1,547 +1,272 @@
+```tsx
 import Image from "next/image";
-import Script from "next/script";
 
 const APPLY_URL = "#";
 
 export default function Home() {
   const stats = [
-    ["2000+", "Aktif Sürücü"],
-    ["150.000+", "Tamamlanan Yolculuk"],
-    ["09:00–00:00", "Gerçek Destek"],
-    ["Her Gün", "Ödeme"],
+    ["Istanbul", "Operational Focus"],
+    ["Taksim", "Field Experience"],
+    ["Daily", "Driver Coordination"],
+    ["Growing", "Fleet Network"],
   ];
 
-  const reviews = [
-    "Destek ekibi ulaşılabilir ve süreç hızlı ilerliyor.",
-    "Daha düzenli çalışma ve daha net kazanç takibi.",
-    "Başvuru süreci kolay ve yönetimi rahat.",
-  ];
-
-  const faq = [
-    [
-      "Yandex Pro nedir?",
-      "Sürücülerin platform üzerinden yolculuk almasını sağlayan sistemdir.",
-    ],
-    [
-      "Nasıl kayıt olabilirim?",
-      "Başvuru formu aktif olduğunda bilgilerinizi göndererek başlayabilirsiniz.",
-    ],
-    [
-      "Aktivasyon ne kadar sürer?",
-      "Belgeler ve süreç tamamlandıktan sonra aktivasyon yapılır.",
-    ],
-    [
-      "İstanbul dışında hizmet var mı?",
-      "Şimdilik İstanbul odaklı ilerlenmektedir.",
-    ],
+  const operations = [
+    {
+      title: "Fleet Coordination",
+      desc: "Structured vehicle and driver coordination for scalable operations.",
+    },
+    {
+      title: "Driver Onboarding",
+      desc: "Organized onboarding and support process for drivers.",
+    },
+    {
+      title: "Operational Support",
+      desc: "Daily operational management focused on Istanbul mobility.",
+    },
   ];
 
   return (
-    <main className="bg-black text-white">
-	<Script
-src="https://yastatic.net/taxi-widget/ya-taxi-widget-v2.js"
-strategy="afterInteractive"
-/>
-
-      {/* NAV */}
+    <main className="bg-black text-white overflow-hidden">
+      {/* NAVBAR */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-black/70 border-b border-white/10">
-
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-
-          <div className="text-3xl font-black">
-
-            <span className="text-yellow-400">
-              Hi
-            </span>
-
-            GO
-
+          <div className="text-3xl font-black tracking-tight">
+            <span className="text-yellow-400">HI</span>GO
           </div>
 
           <nav className="hidden md:flex gap-8 text-zinc-300">
+            <a href="#operations" className="hover:text-white transition">
+              Operations
+            </a>
 
-            <a href="#istanbul">İstanbul</a>
+            <a href="#about" className="hover:text-white transition">
+              About
+            </a>
 
-            <a href="#hakkimizda">Hakkımızda</a>
-
-            <a href="#yorumlar">Yorumlar</a>
-
-            <a href="#sss">SSS</a>
-
+            <a href="#contact" className="hover:text-white transition">
+              Contact
+            </a>
           </nav>
 
           <a
             href={APPLY_URL}
-            className="
-            bg-yellow-400
-            text-black
-            px-6
-            py-3
-            rounded-2xl
-            font-bold"
+            className="bg-yellow-400 text-black px-6 py-3 rounded-2xl font-bold hover:scale-105 transition"
           >
-            Başvur
+            Contact Operations
           </a>
-
         </div>
-
       </header>
 
       {/* HERO */}
+      <section className="relative min-h-[95vh] flex items-center">
+        <div className="absolute w-[900px] h-[900px] bg-yellow-500/10 blur-3xl rounded-full left-1/2 -translate-x-1/2 top-[-450px]" />
 
-      <section className="relative overflow-hidden">
-
-        <div className="absolute w-[900px] h-[900px] bg-yellow-500/10 blur-3xl rounded-full left-1/2 -translate-x-1/2 top-[-400px]" />
-
-        <div className="relative max-w-7xl mx-auto px-6 min-h-[92vh] grid md:grid-cols-2 items-center gap-14">
-
+        <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
-
-            <div
-              className="
-              inline-flex
-              px-5
-              py-2
-              rounded-full
-              bg-yellow-400/10
-              text-yellow-400
-              mb-8"
-            >
-              Yandex GO Resmi İş Ortağı
+            <div className="inline-flex px-5 py-2 rounded-full bg-yellow-400/10 text-yellow-400 mb-8">
+              Fleet Operations in Istanbul
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-black leading-[0.9]">
-
-              İstanbul'da
-
+            <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
+              Fleet
               <br />
-
-              Daha Fazla
-
+              Operations
               <br />
-
               <span className="text-yellow-400">
-
-                Kazan
-
+                for Istanbul Mobility
               </span>
-
             </h1>
 
-            <p className="mt-8 text-zinc-400 text-xl max-w-xl">
-
-              HiGO ile daha güçlü gelir,
-              daha düzenli sistem,
-              daha iyi sürücü deneyimi.
-
+            <p className="mt-8 text-zinc-400 text-xl max-w-xl leading-9">
+              Operational support, driver coordination, and scalable fleet
+              management focused on Istanbul transportation operations.
             </p>
 
-            <div className="mt-10 flex gap-4 flex-wrap">
-
+            <div className="mt-10 flex flex-wrap gap-4">
               <a
                 href={APPLY_URL}
-                className="
-                bg-yellow-400
-                text-black
-                px-10
-                py-5
-                rounded-3xl
-                font-black"
+                className="bg-yellow-400 text-black px-10 py-5 rounded-3xl font-black hover:scale-105 transition"
               >
-                Başvuru Yakında
+                Driver Applications
               </a>
 
               <a
-                href="#hakkimizda"
-                className="
-                border
-                border-white/10
-                px-10
-                py-5
-                rounded-3xl"
+                href="#about"
+                className="border border-white/10 px-10 py-5 rounded-3xl hover:bg-white/5 transition"
               >
-                İncele
+                Learn More
               </a>
-
             </div>
 
-            <div className="mt-8 flex gap-6 flex-wrap text-zinc-500">
-
-              <div>✓ Resmi İş Ortağı</div>
-
-              <div>✓ Şeffaf Sistem</div>
-
-              <div>✓ İstanbul</div>
-
+            <div className="mt-10 flex gap-6 flex-wrap text-zinc-500">
+              <div>✓ Istanbul Based</div>
+              <div>✓ Driver Support</div>
+              <div>✓ Operational Structure</div>
             </div>
-
           </div>
 
           <div>
-
-            <div
-              className="
-              rounded-[40px]
-              overflow-hidden
-              border
-              border-white/10"
-            >
-
+            <div className="rounded-[40px] overflow-hidden border border-white/10 bg-white/5">
               <Image
                 src="/yndpro.png"
-                alt="HiGO"
+                alt="HIGO Fleet Operations"
                 width={1500}
                 height={1000}
                 priority
                 className="w-full"
               />
-
             </div>
-
           </div>
-
         </div>
-
-      </section>
-
-      {/* ISTANBUL */}
-
-      <section
-        id="istanbul"
-        className="py-24"
-      >
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div
-            className="
-            rounded-[40px]
-            bg-gradient-to-r
-            from-yellow-500/10
-            to-black
-            border
-            border-yellow-400/20
-            p-10"
-          >
-
-            <div className="text-yellow-400 font-black">
-
-              HIGO İSTANBUL
-
-            </div>
-
-            <h2 className="text-5xl font-black mt-6">
-
-              İstanbul'da
-              Sürücüler İçin
-              Yeni Nesil Sistem
-
-            </h2>
-
-            <a
-              href={APPLY_URL}
-              className="
-              inline-block
-              mt-10
-              bg-yellow-400
-              text-black
-              px-10
-              py-4
-              rounded-3xl"
-            >
-              Başvur
-            </a>
-
-          </div>
-
-        </div>
-
       </section>
 
       {/* STATS */}
-
       <section className="py-24">
-
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
-
           {stats.map(([a, b]) => (
-
             <div
               key={a}
-              className="
-              p-10
-              rounded-3xl
-              bg-white/5
-              border
-              border-white/10
-              text-center"
+              className="p-10 rounded-3xl bg-white/5 border border-white/10 text-center"
             >
-
               <div className="text-5xl font-black text-yellow-400">
-
                 {a}
-
               </div>
 
               <div className="mt-4 text-zinc-400">
-
                 {b}
-
               </div>
-
             </div>
-
           ))}
-
         </div>
-
       </section>
 
-      {/* HAKKIMIZDA */}
-
+      {/* OPERATIONS */}
       <section
-        id="hakkimizda"
+        id="operations"
         className="py-32"
       >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-yellow-400 font-black mb-4">
+            OPERATIONAL STRUCTURE
+          </div>
 
-        <div className="max-w-6xl mx-auto px-6">
-
-          <h2 className="text-5xl font-black mb-10">
-
-            Hakkımızda
-
+          <h2 className="text-5xl md:text-6xl font-black max-w-4xl leading-tight">
+            Structured Transportation Operations for Istanbul
           </h2>
 
-          <p className="text-zinc-400 text-xl leading-10">
+          <div className="grid md:grid-cols-3 gap-8 mt-20">
+            {operations.map((item) => (
+              <div
+                key={item.title}
+                className="p-10 rounded-[32px] bg-white/5 border border-white/10"
+              >
+                <h3 className="text-2xl font-black">
+                  {item.title}
+                </h3>
 
-            HiGO, İstanbul'da sürücüler için
-            daha verimli çalışma deneyimi sunmayı
-            hedefleyen resmi iş ortağı modelidir.
+                <p className="mt-6 text-zinc-400 leading-8">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            Daha şeffaf yapı,
-            daha iyi gelir yönetimi
-            ve daha güçlü destek anlayışıyla
-            ilerler.
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="py-32 border-t border-white/10"
+      >
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-yellow-400 font-black mb-4">
+            ABOUT HIGO
+          </div>
 
+          <h2 className="text-5xl md:text-6xl font-black leading-tight">
+            Istanbul-Based Mobility Operations
+          </h2>
+
+          <p className="mt-10 text-zinc-400 text-xl leading-10">
+            HIGO is an Istanbul-based operational initiative focused on fleet
+            coordination, driver onboarding, and transportation support systems.
           </p>
 
+          <p className="mt-8 text-zinc-500 text-lg leading-9">
+            With direct field experience in high-demand transportation areas
+            such as Taksim, HIGO aims to build scalable and structured
+            operational solutions within the urban mobility ecosystem.
+          </p>
         </div>
-
-      </section>
-
-      {/* YORUMLAR */}
-
-      <section
-        id="yorumlar"
-        className="py-24"
-      >
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <h2 className="text-center text-5xl font-black mb-16">
-
-            Sürücü Yorumları
-
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            {reviews.map((r) => (
-
-              <div
-                key={r}
-                className="
-                p-8
-                rounded-3xl
-                bg-white/5
-                border
-                border-white/10"
-              >
-
-                <div className="text-yellow-400">
-
-                  ★★★★★
-
-                </div>
-
-                <p className="mt-6 text-zinc-400">
-
-                  {r}
-
-                </p>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* SSS */}
-
-      <section
-        id="sss"
-        className="py-24"
-      >
-
-        <div className="max-w-4xl mx-auto px-6">
-
-          <h2 className="text-center text-5xl font-black mb-12">
-
-            Sık Sorulan Sorular
-
-          </h2>
-
-          <div className="space-y-4">
-
-            {faq.map(([q, a]) => (
-
-              <details
-                key={q}
-                className="
-                p-6
-                rounded-3xl
-                border
-                border-white/10
-                bg-white/5"
-              >
-
-                <summary className="cursor-pointer font-bold">
-
-                  {q}
-
-                </summary>
-
-                <p className="mt-5 text-zinc-400">
-
-                  {a}
-
-                </p>
-
-              </details>
-
-            ))}
-
-          </div>
-
-        </div>
-
       </section>
 
       {/* CTA */}
+      <section className="py-32">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-6xl font-black leading-tight">
+            Building Structured
+            <br />
+            <span className="text-yellow-400">
+              Fleet Operations
+            </span>
+          </h2>
 
-      <section className="py-32 text-center">
+          <p className="mt-8 text-zinc-400 text-xl">
+            Focused on scalable driver coordination and operational support in
+            Istanbul.
+          </p>
 
-        <h2 className="text-6xl font-black">
+          <a
+            href={APPLY_URL}
+            className="inline-block mt-10 bg-yellow-400 text-black px-14 py-5 rounded-3xl font-black hover:scale-105 transition"
+          >
+            Contact Operations
+          </a>
+        </div>
+      </section>
 
-          İstanbul'da
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="py-24 border-t border-white/10"
+      >
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="text-yellow-400 font-black mb-4">
+            CONTACT
+          </div>
 
-          <br />
+          <h2 className="text-5xl font-black">
+            Let’s Connect
+          </h2>
 
-          <span className="text-yellow-400">
+          <div className="mt-12 space-y-5 text-zinc-400 text-lg">
+            <p>Istanbul, Türkiye</p>
 
-            Başlamaya Hazır Mısın?
+            <p>operations@higo.com.tr</p>
 
-          </span>
-
-        </h2>
-
-        <a
-          href={APPLY_URL}
-          className="
-          inline-block
-          mt-10
-          bg-yellow-400
-          text-black
-          px-14
-          py-5
-          rounded-3xl
-          font-black"
-        >
-          Başvuru Yakında
-
-        </a>
-
+            <p>+90 XXX XXX XX XX</p>
+          </div>
+        </div>
       </section>
 
       {/* FOOTER */}
-
       <footer className="border-t border-white/10">
-
         <div className="max-w-7xl mx-auto px-6 py-12 text-center">
-
           <div className="text-4xl font-black">
-
-            <span className="text-yellow-400">
-
-              Hi
-
-            </span>
-
-            GO
-
+            <span className="text-yellow-400">HI</span>GO
           </div>
 
           <p className="mt-5 text-zinc-500">
-
-            İstanbul • Yakında
-
+            Istanbul Fleet Operations
           </p>
 
           <p className="mt-8 text-zinc-600">
-
-            © {new Date().getFullYear()} HiGO
-
+            © {new Date().getFullYear()} HIGO
           </p>
-
         </div>
-
-{/* YANDEX BADGE */}
-
-<section className="py-16">
-
-<div className="max-w-7xl mx-auto px-6 text-center">
-
-<div className="text-zinc-400 mb-6">
-
-Resmi Yandex Entegrasyonu
-
-</div>
-
-<div
-className="ya-taxi-widget"
-data-ref="15048508"
-data-proxy-url="https://{app}.redirect.appmetrica.yandex.com/route?start-lat={start-lat}&start-lon={start-lon}&end-lat={end-lat}&end-lon={end-lon}&tariffClass={tariff}&ref={ref}&appmetrica_tracking_id={redirect}&lang={lang}&erid={erid}"
-data-tariff="econom"
-data-app="3"
-data-lang="tr"
-data-redirect="1178268795219780156"
-data-description="HiGO"
-data-size="s"
-data-theme="action"
-data-title="HiGO ile Başvur"
-data-use-location="true"
-data-point-a=""
-data-point-b=""
-/>
-
-</div>
-
-</section>
       </footer>
-
-<div
-style={{
-display:"none"
-}}
->
-
-7b4rtc9451ente15
-
-</div>
     </main>
   );
 }
+```

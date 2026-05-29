@@ -1,4 +1,3 @@
-```tsx
 import Image from "next/image";
 
 const APPLY_URL = "#";
@@ -269,4 +268,3 @@ export default function Home() {
     </main>
   );
 }
-```
